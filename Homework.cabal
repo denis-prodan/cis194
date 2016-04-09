@@ -1,0 +1,88 @@
+name:           Homework
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         Denis Prodan
+
+executable Homework
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4,
+                   strict >=0.3 && <0.4,
+                   containers,
+                   mtl,
+                   MonadRandom >=0.4 && <0.5
+  ghc-options:     -Wall
+  other-modules:   
+                   Tasks.Calculator,
+                   Tasks.CreditCardValidation,
+                   Tasks.ExprT,
+                   Tasks.Folds,
+                   Tasks.Golf,
+                   Tasks.Hanoi,
+                   Tasks.Log,
+                   Tasks.LogAnalysis,
+                   Tasks.Parser,
+                   Tasks.Fibonacci,
+                   Tasks.Editor,
+                   Tasks.Buffer,
+                   Tasks.Sized,
+                   Tasks.StringBuffer,
+                   Tasks.StringBufEditor,
+                   Tasks.JoinList,
+                   Tasks.Scrabble,
+                   Tasks.JoinListEditor,
+                   Tasks.Employee,
+                   Tasks.Party,
+                   Tasks.AParser,
+                   Tasks.SExpr,
+                   Tasks.Risk
+
+test-suite HomeworkTest
+  type:            exitcode-stdio-1.0
+  main-is:         HomeworkTest.hs
+  ghc-options:     -Wall -rtsopts
+  build-depends:   
+                   base >= 4,
+                   HTF > 0.9,
+                   HUnit >=1.3 && <1.4,
+                   containers,
+                   mtl,
+                   MonadRandom
+  other-modules:   
+                  Tasks.Calculator,
+                  Tasks.CreditCardValidation,
+                  Tasks.CreditCardValidationTest,
+                  Tasks.ExprT,
+                  Tasks.Folds,
+                  Tasks.FoldsTest,
+                  Tasks.Golf,
+                  Tasks.GolfTest,
+                  Tasks.Hanoi,
+                  Tasks.HanoiTest,
+                  Tasks.Log,
+                  Tasks.LogAnalysis,
+                  Tasks.LogAnalysisTest,
+                  Tasks.Parser,
+                  Tasks.CalculatorTest,
+                  Tasks.Fibonacci,
+                  Tasks.FibonacciTest,
+                  Tasks.Editor,
+                  Tasks.Buffer,
+                  Tasks.Sized,
+                  Tasks.StringBuffer,
+                  Tasks.StringBufEditor,
+                  Tasks.JoinList,
+                  Tasks.JoinListTest,
+                  Tasks.Scrabble,
+                  Tasks.JoinListEditor,
+                  Tasks.Employee,
+                  Tasks.Party,
+                  Tasks.AParser,
+                  Tasks.SExpr,
+                  Tasks.Risk
+  hs-source-dirs:  
+                  src,
+                  src-test
+
